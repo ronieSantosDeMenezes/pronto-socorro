@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const url = 'mongodb+srv://Caio:caiojulia123@pronto-socorrocluster3.xrfek4l.mongodb.net/?retryWrites=true&w=majority'
+const url = process.env.MONGO_DB_URL
 const conn = () => {
     return new Promise((resolve, reject) => {
         mongoose.connect(url)
